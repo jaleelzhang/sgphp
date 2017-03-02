@@ -54,7 +54,7 @@
                     <li class="@yield('tutorial')"><a href="http://www.sgphp.com/tutorial/1">教程</a></li>
                     <li class="@yield('video')"><a href="http://www.sgphp.com/video/1">视频</a></li>
                     <li class="@yield('traveling')"><a href="http://www.sgphp.com/traveling/1">游记</a></li>
-                    <li class="@yield('contact')"><a href="http://www.sgphp.com/contact">关于我</a></li>
+                    <li class="@yield('contact')"><a href="http://www.sgphp.com/contact">关于</a></li>
                 </ul>
             </div>
         </div>

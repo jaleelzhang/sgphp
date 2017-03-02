@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 Route::get('/blog/page/{page}', 'BlogController@blogList');
 
-Route::get('/blog/profile/{id}', 'BlogController@blogList');
+Route::get('/blog/profile/{id}', 'BlogController@blogDetails');

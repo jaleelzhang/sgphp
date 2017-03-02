@@ -21,6 +21,7 @@ class BlogController extends Controller
 
     public function blogDetails($id) {
         $data = Blog::getById($id);
+        $data['content'] = html_entity_decode($data['content']);
         return view('blog/details', ['details' => $data]);
     }
 }

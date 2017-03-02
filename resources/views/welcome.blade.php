@@ -24,7 +24,7 @@
                 font-family: 'Raleway';
                 font-style: normal;
                 font-weight: 100;
-                src: local('Raleway Thin'), local('Raleway-Thin'), url(https://fonts.gstatic.com/s/raleway/v11/rr0ijB5_2nAJsAoZ6vECXYX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+                /*src: local('Raleway Thin'), local('Raleway-Thin'), url(https://fonts.gstatic.com/s/raleway/v11/rr0ijB5_2nAJsAoZ6vECXYX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');*/
                 unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
             }
 

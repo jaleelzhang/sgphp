@@ -50,10 +50,10 @@
             </div>
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="@yield('blog')"><a href="http://www.sgphp.com/blog/1">博文</a></li>
-                    <li class="@yield('tutorial')"><a href="http://www.sgphp.com/tutorial/1">教程</a></li>
-                    <li class="@yield('video')"><a href="http://www.sgphp.com/video/1">视频</a></li>
-                    <li class="@yield('traveling')"><a href="http://www.sgphp.com/traveling/1">游记</a></li>
+                    <li class="@yield('blog')"><a href="http://www.sgphp.com/blog/page/1">博文</a></li>
+                    <li class="@yield('tutorial')"><a href="http://www.sgphp.com/tutorial/page/1">教程</a></li>
+                    <li class="@yield('video')"><a href="http://www.sgphp.com/video/page/1">视频</a></li>
+                    <li class="@yield('traveling')"><a href="http://www.sgphp.com/traveling/page/1">游记</a></li>
                     <li class="@yield('contact')"><a href="http://www.sgphp.com/contact">关于</a></li>
                 </ul>
             </div>

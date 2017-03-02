@@ -32,6 +32,7 @@
             text-decoration: none;
             text-transform: uppercase;
         }
+
     </style>
 </head>
 <body>
@@ -49,11 +50,11 @@
             </div>
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="@yield('blog')"><a href="http://www.sgphp.com/blog">Blog</a></li>
-                    <li class="@yield('tutorial')"><a href="http://www.sgphp.com/tutorial">Tutorial</a></li>
-                    <li class="@yield('video')"><a href="http://www.sgphp.com/video">Video</a></li>
-                    <li class="@yield('traveling')"><a href="http://www.sgphp.com/traveling">Traveling</a></li>
-                    <li class="@yield('contact')"><a href="http://www.sgphp.com/contact">Contact</a></li>
+                    <li class="@yield('blog')"><a href="http://www.sgphp.com/blog/1">博文</a></li>
+                    <li class="@yield('tutorial')"><a href="http://www.sgphp.com/tutorial/1">教程</a></li>
+                    <li class="@yield('video')"><a href="http://www.sgphp.com/video/1">视频</a></li>
+                    <li class="@yield('traveling')"><a href="http://www.sgphp.com/traveling/1">游记</a></li>
+                    <li class="@yield('contact')"><a href="http://www.sgphp.com/contact">关于我</a></li>
                 </ul>
             </div>
         </div>

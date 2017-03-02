@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blog', function () {
-    return view('blog/bloglist');
-});
+Route::get('/blog/page/{page}', 'BlogController@blogList');
+
+Route::get('/blog/profile/{id}', 'BlogController@blogList');

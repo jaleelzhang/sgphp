@@ -89,11 +89,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/blog') }}">Blog</a>
-                    <a href="{{ url('/tutorial') }}">Tutorial</a>
-                    <a href="{{ url('/video') }}">Video</a>
-                    <a href="{{ url('/traveling') }}">Traveling</a>
-                    <a href="{{ url('/contact') }}">Contact</a>
+                    <a href="{{ url('/blog/page/1') }}">博文</a>
+                    <a href="{{ url('/tutorial/page/1') }}">教程</a>
+                    <a href="{{ url('/video/page/1') }}">视频</a>
+                    <a href="{{ url('/traveling/page/1') }}">游记</a>
+                    <a href="{{ url('/contact') }}">关于我</a>
                 </div>
             </div>
         </div>

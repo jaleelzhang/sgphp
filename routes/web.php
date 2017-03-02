@@ -18,3 +18,19 @@ Route::get('/', function () {
 Route::get('/blog/page/{page}', 'BlogController@blogList');
 
 Route::get('/blog/profile/{id}', 'BlogController@blogDetails');
+
+Route::get('/tutorial/page/{page}', function () {
+    view('errors/503');
+});
+
+Route::get('/video/page/{page}', function () {
+    view('errors/503');
+});
+
+Route::get('/traveling/page/{page}', function () {
+    view('errors/503');
+});
+
+Route::get('/contact', function () {
+    view('errors/503');
+});

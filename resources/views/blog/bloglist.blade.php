@@ -8,6 +8,7 @@
     @foreach($blogs as $blog)
         <div class="jumbotron">
             <h1><a href="http://www.sgphp.com/blog/profile/{{ $blog['_id'] }}" style="font-size: x-large; color: #636b6f">{{ $blog['title'] }}</a></h1>
+            <p>{{ date('Y年m月d日 H:i:s', $blog['create_time']) }}</p>
             <p style="font-size: larger">{{ $blog['abstract'] }}</p>
             <p><a class="btn btn-default btn-lg" href="http://www.sgphp.com/blog/profile/{{ $blog['_id'] }}" role="button">Learn more</a></p>
         </div>

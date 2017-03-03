@@ -1,6 +1,6 @@
 @extends('layouts.common')
 
-@section('title', 'Blog list page')
+@section('title', '博文列表页')
 
 @section('blog', 'active')
 

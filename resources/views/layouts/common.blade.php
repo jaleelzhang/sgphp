@@ -33,6 +33,12 @@
             text-transform: uppercase;
         }
 
+        img {
+            max-width:100%;
+            height: auto;
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -51,17 +57,24 @@
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="@yield('blog')"><a href="http://www.sgphp.com/blog/page/1">博文</a></li>
-                    <li class="@yield('tutorial')"><a href="http://www.sgphp.com/tutorial/page/1">教程</a></li>
+                    {{--<li class="@yield('tutorial')"><a href="http://www.sgphp.com/tutorial/page/1">教程</a></li>
                     <li class="@yield('video')"><a href="http://www.sgphp.com/video/page/1">视频</a></li>
-                    <li class="@yield('traveling')"><a href="http://www.sgphp.com/traveling/page/1">游记</a></li>
+                    <li class="@yield('traveling')"><a href="http://www.sgphp.com/traveling/page/1">游记</a></li>--}}
                     <li class="@yield('contact')"><a href="http://www.sgphp.com/contact">关于</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </div>
+
 <div class="container">
     @yield('content')
+</div>
+
+<div class="container" style="text-align: center;margin-bottom: 20px;">
+    <hr>
+    <p>SGPHP-一个致力于分享世界上最好的语言的网站</p>
+    <p>2013-2017&copySGPHP</p>
 </div>
 </body>
 </html>

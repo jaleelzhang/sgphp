@@ -20,9 +20,10 @@
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
             margin: 0;
-            display: flex;
+            height:100vh;
+            /*display: flex;
             min-height: 100vh;
-            flex-direction: column;
+            flex-direction: column;*/
         }
 
         .links > a {
@@ -44,7 +45,7 @@
     </style>
 </head>
 <body>
-<div class="container" style="margin: 0px;">
+<div class="container">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -80,15 +81,17 @@
         </div>
     </nav>
 </div>
+<div style="display: flex;min-height: 90vh;flex-direction: column">
+
 
 <div class="container" style="flex: 1;">
     @yield('content')
 </div>
-
 <div class="container" style="text-align: center;margin-bottom: 20px;">
     <hr>
     <p>SGPHP-一个致力于分享世界上最好的语言的网站</p>
     <p>2013-2017&copySGPHP</p>
+</div>
 </div>
 </body>
 </html>

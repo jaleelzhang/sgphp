@@ -15,11 +15,11 @@
     <nav aria-label="...">
         <ul class="pager">
             @if($page > 1)
-            <li class="previous"><a href="http://www.sgphp.com/blog/page/{{ $page-1 }}"><span aria-hidden="true">&larr;</span> Newer</a></li>
+            <li class="previous"><a href="http://www.sgphp.com/blog/page/{{ $page-1 }}"><span aria-hidden="true">&larr;</span> 上一页</a></li>
             @endif
 
             @if($page < $total_page)
-                <li class="next"><a href="http://www.sgphp.com/blog/page/{{ $page+1 }}">Older <span aria-hidden="true">&rarr;</span></a></li>
+                <li class="next"><a href="http://www.sgphp.com/blog/page/{{ $page+1 }}">下一页 <span aria-hidden="true">&rarr;</span></a></li>
             @endif
         </ul>
     </nav>

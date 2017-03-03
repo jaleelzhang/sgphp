@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('/blog/page/{page}', 'BlogController@blogList');
 
+Route::get('/blog/{type}/page/{page}', 'BlogController@blogListByType');
+
 Route::get('/blog/profile/{id}', 'BlogController@blogDetails');
 
 Route::get('/tutorial/page/{page}', function () {

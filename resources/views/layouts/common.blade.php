@@ -19,8 +19,8 @@
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
-            height: 100vh;
             margin: 0;
+            height: 100vh;
         }
 
         .links > a {
@@ -56,7 +56,19 @@
             </div>
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="@yield('blog')"><a href="http://www.sgphp.com/blog/page/1">博文</a></li>
+                    <li class="@yield('blog') dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">博文</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.sgphp.com/blog/page/1">全部</a></li>
+                            <li><a href="http://www.sgphp.com/blog/linux/page/1">LINUX</a></li>
+                            <li><a href="http://www.sgphp.com/blog/php/page/1">PHP</a></li>
+                            {{--<li><a href="http://www.sgphp.com/blog/mysql/page/1">MYSQL</a></li>--}}
+                            <li><a href="http://www.sgphp.com/blog/mongodb/page/1">MONGODB</a></li>
+                            {{--<li><a href="">REDIS</a></li>
+                            <li><a href="">CSS</a></li>
+                            <li><a href="">JS</a></li>--}}
+                        </ul>
+                    </li>
                     {{--<li class="@yield('tutorial')"><a href="http://www.sgphp.com/tutorial/page/1">教程</a></li>
                     <li class="@yield('video')"><a href="http://www.sgphp.com/video/page/1">视频</a></li>
                     <li class="@yield('traveling')"><a href="http://www.sgphp.com/traveling/page/1">游记</a></li>--}}
@@ -67,11 +79,12 @@
     </nav>
 </div>
 
-<div class="container">
+<div class="container" style="display: flex;min-height: 100vh;
+            flex-direction: column;">
     @yield('content')
 </div>
 
-<div class="container" style="text-align: center;margin-bottom: 20px;">
+<div class="container" style="text-align: center;margin-bottom: 20px;flex: 1;">
     <hr>
     <p>SGPHP-一个致力于分享世界上最好的语言的网站</p>
     <p>2013-2017&copySGPHP</p>

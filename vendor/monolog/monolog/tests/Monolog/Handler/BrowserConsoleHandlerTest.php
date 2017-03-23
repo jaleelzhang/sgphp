@@ -41,7 +41,7 @@ class BrowserConsoleHandlerTest extends TestCase
 
         $expected = <<<EOF
 (function (c) {if (c && c.groupCollapsed) {
-c.log("%cfoo%cbar%c", "font-weight: normal", "color: red", "font-weight: normal");
+c.log("%cfoo%cbar%c", "fonts-weight: normal", "color: red", "fonts-weight: normal");
 }})(console);
 EOF;
 
@@ -57,7 +57,7 @@ EOF;
 
         $expected = <<<EOF
 (function (c) {if (c && c.groupCollapsed) {
-c.log("%c[foo] %c\"bar\\n[baz]\"%c", "font-weight: normal", "color: red", "font-weight: normal");
+c.log("%c[foo] %c\"bar\\n[baz]\"%c", "fonts-weight: normal", "color: red", "fonts-weight: normal");
 }})(console);
 EOF;
 
@@ -75,9 +75,9 @@ EOF;
 
         $expected = <<<EOF
 (function (c) {if (c && c.groupCollapsed) {
-c.log("%c%cfoo%c", "font-weight: normal", "background-color: blue; color: white; border-radius: 3px; padding: 0 2px 0 2px", "font-weight: normal");
-c.log("%c%cbar%c", "font-weight: normal", "background-color: green; color: white; border-radius: 3px; padding: 0 2px 0 2px", "font-weight: normal");
-c.log("%c%cfoo%c", "font-weight: normal", "background-color: blue; color: white; border-radius: 3px; padding: 0 2px 0 2px", "font-weight: normal");
+c.log("%c%cfoo%c", "fonts-weight: normal", "background-color: blue; color: white; border-radius: 3px; padding: 0 2px 0 2px", "fonts-weight: normal");
+c.log("%c%cbar%c", "fonts-weight: normal", "background-color: green; color: white; border-radius: 3px; padding: 0 2px 0 2px", "fonts-weight: normal");
+c.log("%c%cfoo%c", "fonts-weight: normal", "background-color: blue; color: white; border-radius: 3px; padding: 0 2px 0 2px", "fonts-weight: normal");
 }})(console);
 EOF;
 
@@ -93,8 +93,8 @@ EOF;
 
         $expected = <<<EOF
 (function (c) {if (c && c.groupCollapsed) {
-c.groupCollapsed("%ctest", "font-weight: normal");
-c.log("%c%s", "font-weight: bold", "Context");
+c.groupCollapsed("%ctest", "fonts-weight: normal");
+c.log("%c%s", "fonts-weight: bold", "Context");
 c.log("%s: %o", "foo", "bar");
 c.groupEnd();
 }})(console);
@@ -118,10 +118,10 @@ EOF;
 
         $expected = <<<EOF
 (function (c) {if (c && c.groupCollapsed) {
-c.log("%ctest1", "font-weight: normal");
-c.log("%ctest2", "font-weight: normal");
-c.log("%ctest3", "font-weight: normal");
-c.log("%ctest4", "font-weight: normal");
+c.log("%ctest1", "fonts-weight: normal");
+c.log("%ctest2", "fonts-weight: normal");
+c.log("%ctest3", "fonts-weight: normal");
+c.log("%ctest4", "fonts-weight: normal");
 }})(console);
 EOF;
 

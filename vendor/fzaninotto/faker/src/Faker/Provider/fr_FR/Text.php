@@ -2702,7 +2702,7 @@ que traversent en diagonale des lambourdes noires, s'accroche
 parfois quelque maigre poirier, et les rez-de-chaussée ont à leur
 porte une petite barrière tournante pour les défendre des
 poussins, qui viennent picorer, sur le seuil, des miettes de pain
-bis trempé de cidre. Cependant les cours se font plus étroites,
+bis trempé de cidre. Cependant les cours se fonts plus étroites,
 les habitations se rapprochent, les haies disparaissent; un fagot
 de fougères se balance sous une fenêtre au bout d'un manche à
 balai; il y a la forge d'un maréchal et ensuite un charron avec
@@ -2716,7 +2716,7 @@ notaire, et la plus belle du pays.
 L'église est de l'autre côté de la rue, vingt pas plus loin, à
 l'entrée de la place. Le petit cimetière qui l'entoure, clos d'un
 mur à hauteur d'appui, est si bien rempli de tombeaux, que les
-vieilles pierres à ras du sol font un dallage continu, où l'herbe
+vieilles pierres à ras du sol fonts un dallage continu, où l'herbe
 a dessiné de soi-même des carrés verts réguliers. L'église a été
 rebâtie à neuf dans les dernières années du règne de Charles X. La
 voûte en bois commence à se pourrir par le haut, et, de place en
@@ -2848,7 +2848,7 @@ L'hôtesse devint rouge de dépit. Le pharmacien ajouta:
 et qu'on ait l'idée, par exemple de monter une poule patriotique
 pour la Pologne ou les inondés de Lyon...
 
--- Ce ne sont pas des gueux comme lui qui nous font peur!
+-- Ce ne sont pas des gueux comme lui qui nous fonts peur!
 interrompit l'hôtesse, en haussant ses grosses épaules. Allez!
 allez! monsieur Homais, tant que le Lion d'or vivra, on y viendra.
 Nous avons du foin dans nos bottes, nous autres! Au lieu qu'un de
@@ -3230,7 +3230,7 @@ le plus délié?
 -- J'ai éprouvé cela, répondit-elle.
 
 -- C'est pourquoi, dit-il, j'aime surtout les poètes. Je trouve
-les vers plus tendres que la prose, et qu'ils font bien mieux
+les vers plus tendres que la prose, et qu'ils fonts bien mieux
 pleurer.
 
 -- Cependant ils fatiguent à la longue, reprit Emma; et
@@ -8128,7 +8128,7 @@ avait cette indéfinissable beauté qui résulte de la joie, de
 l'enthousiasme, du succès, et qui n'est que l'harmonie du
 tempérament avec les circonstances. Ses convoitises, ses chagrins,
 l'expérience du plaisir et ses illusions toujours jeunes, comme
-font aux fleurs le fumier, la pluie, les vents et le soleil,
+fonts aux fleurs le fumier, la pluie, les vents et le soleil,
 l'avaient par gradations développée, et elle s'épanouissait enfin
 dans la plénitude de sa nature. Ses paupières semblaient taillées
 tout exprès pour ses longs regards amoureux où la prunelle se
@@ -9135,7 +9135,7 @@ du plaisir, enseignait la vertu.
 
 -- _Castigat ridendo mores_, monsieur Bournisien! Ainsi, regardez
 la plupart des tragédies de Voltaire; elles sont semées habilement
-de réflexions philosophiques qui en font pour le peuple une
+de réflexions philosophiques qui en fonts pour le peuple une
 véritable école de morale et de diplomatie.
 
 -- Moi, dit Binet, j'ai vu autrefois une pièce intitulée le _Gamin
@@ -9207,7 +9207,7 @@ Et, séparant les syllabes de sa phrase, Homais répéta:
 -- Eh bien! ils avaient tort, dit Bournisien résigné à tout
 entendre.
 
--- Parbleu! ils en font bien d'autres! exclama l'apothicaire.
+-- Parbleu! ils en fonts bien d'autres! exclama l'apothicaire.
 
 -- Monsieur!... reprit l'ecclésiastique avec des yeux si
 farouches, que le pharmacien en fut intimidé.

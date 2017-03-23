@@ -1083,7 +1083,7 @@ A hajónaplóban benne van a Honolulu-Star helyzete, úgy az északi, mint a dé
 - Nem tudom. Eltűnt. Miért fontos ez?
 - Ért ön a könyvvitelhez, Wirth kapitány?
 - Keveset.
-- Az Angol Bank évi mérlege egyszer két pennyvel hibázott. Teljes három hetet dolgoztak éjjel-nappal, amíg a sok millió font között végre megtalálták a két penny hiányt.
+- Az Angol Bank évi mérlege egyszer két pennyvel hibázott. Teljes három hetet dolgoztak éjjel-nappal, amíg a sok millió fonts között végre megtalálták a két penny hiányt.
 - Na és?
 - Kiderült, hogy kétmillió fonttal tévedtek. De csak a két pennyn keresztül jöttek rá.
 - Értem. De sajnos a szekrény után hiába kutattam. Megfoghatatlan.
@@ -2057,7 +2057,7 @@ Az óriás egy pillanatra zavarba jött. Azután kiment az odúból, és rövide
 - Batáviából szöktem.
 - Mit akarsz itt?
 - Nem tudom... És... most aludni akarok. Kimerült vagyok.
-És végigfeküdt a gyékényen. A Nagy Bivaly gyékényén. Több gyékény nem volt a helyiségben. Az óriás ott ült keresztbe font lábain, mozdulatlanul, reggelig. És nézte az alvót. Vigyázott rá...
+És végigfeküdt a gyékényen. A Nagy Bivaly gyékényén. Több gyékény nem volt a helyiségben. Az óriás ott ült keresztbe fonts lábain, mozdulatlanul, reggelig. És nézte az alvót. Vigyázott rá...
 És másnap már mindenki tudta, hogy a Nagy Bivaly elvesztette az eszét. Egy kölyköt becéz, mintha a dadája lenne, vigyáz rá, és magával cipeli mindenfelé.
 Jaj lenne annak, aki belekötne vagy bántaná. A Nagy Bivaly, aki soha életében senkit sem szeretett, tisztára megvadult a szeretettől.
 Este valaki bekiáltott:

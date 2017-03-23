@@ -72,16 +72,6 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
 
             <div class="content">
                 <div class="title m-b-md">
@@ -89,7 +79,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/blog/page/1') }}">Blog</a>
+                    <a href="{{ url('/blog') }}">Blog</a>
                     {{--<a href="{{ url('/tutorial/page/1') }}">教程</a>
                     <a href="{{ url('/video/page/1') }}">视频</a>
                     <a href="{{ url('/traveling/page/1') }}">游记</a>--}}

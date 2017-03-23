@@ -534,7 +534,7 @@ class MimeTypeExtensionGuesser implements ExtensionGuesserInterface
         'application/x-font-pcf' => 'pcf',
         'application/x-font-snf' => 'snf',
         'application/x-font-ttf' => 'ttf',
-        'application/x-font-type1' => 'pfa',
+        'application/x-fonts-type1' => 'pfa',
         'application/x-font-woff' => 'woff',
         'application/x-freearc' => 'arc',
         'application/x-futuresplash' => 'spl',

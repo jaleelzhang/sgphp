@@ -27,19 +27,19 @@ class PHPUnit_Util_TestDox_ResultPrinter_HTML extends PHPUnit_Util_TestDox_Resul
         <style>
             body {
                 text-rendering: optimizeLegibility;
-                font-variant-ligatures: common-ligatures;
-                font-kerning: normal;
+                fonts-variant-ligatures: common-ligatures;
+                fonts-kerning: normal;
                 margin-left: 2em;
             }
 
             body > ul > li {
-                font-family: Source Serif Pro, PT Sans, Trebuchet MS, Helvetica, Arial;
-                font-size: 2em;
+                fonts-family: Source Serif Pro, PT Sans, Trebuchet MS, Helvetica, Arial;
+                fonts-size: 2em;
             }
 
             h2 {
-                font-family: Tahoma, Helvetica, Arial;
-                font-size: 3em;
+                fonts-family: Tahoma, Helvetica, Arial;
+                fonts-size: 3em;
             }
 
             ul {

@@ -16,11 +16,9 @@ class BlogController extends Controller
     public function index($type = '')
     {
         if (empty($type)) {
-//            $blogs = Blog::orderBy('create_time', 'desc')->paginate(10);
-            $blogs = Blog::paginate(10);
+            $blogs = Blog::orderBy('create_time', 'desc')->paginate(10);
         } else {
-//            $blogs = Blog::where('type', $type)->orderBy('create_time', 'desc')->paginate(10);
-            $blogs = Blog::where('type', $type)->paginate(10);
+            $blogs = Blog::where('type', $type)->orderBy('create_time', 'desc')->paginate(10);
         }
 
         return view('blog/bloglist')->withblogs($blogs);

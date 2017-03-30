@@ -75,7 +75,7 @@
         </div>
 
         <div class="links">
-            <a href="http://www.sgphp.com">Back to the home page!!!</a>
+            <a href="{{ url('/') }}">Back to the home page!!!</a>
         </div>
     </div>
 </div>

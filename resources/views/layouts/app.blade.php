@@ -58,7 +58,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="{{ url('admin/' . Session::get('admin')['_id']) }}"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;&nbsp;ACCOUNT</a>
+                                    <a href="{{ url('admin/' . Session::get('admin')['_id']) }}"><i class="fa fa-user-md" aria-hidden="true"></i>&nbsp;&nbsp;ACCOUNT</a>
                                     <a href="{{ url('admin/' . Session::get('admin')['_id'] . '/edit') }}"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;SETTING</a>
                                     <a href="{{ url('logout') }}"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;&nbsp;LOGOUT</a>
                                 </li>

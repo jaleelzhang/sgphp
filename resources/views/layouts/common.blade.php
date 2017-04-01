@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="@yield('description')"/>
         <title>SGPHP-@yield('title')</title>
 
         <!-- Styles -->
@@ -51,7 +52,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="{{ url('/') }}">SGPHP</a>
+                        <a class="navbar-brand" href="{{ url('/blog') }}">SGPHP</a>
                     </div>
                     <div class="collapse navbar-collapse" id="example-navbar-collapse">
                         <ul class="nav navbar-nav">

@@ -1,5 +1,7 @@
 @extends('layouts.common')
 
+@section('description', '双哥PHP-一个致力于分享世界上最好的语言的网站')
+
 @section('title', '博文列表页')
 
 @section('blog', 'active')

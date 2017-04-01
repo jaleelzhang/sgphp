@@ -1,6 +1,8 @@
 @extends('layouts.common')
 
-@section('title', 'Blog list page')
+@section('description', $details->abstract)
+
+@section('title', $details->title)
 
 @section('blog', 'active')
 

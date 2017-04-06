@@ -103,7 +103,7 @@ class BlogController extends Controller
         $blog->type = $request->type;
         $blog->abstract = $request->abstract;
         $blog->content = htmlentities($request->content);
-        $blog->create_time = time();
+//        $blog->create_time = time();
         $blog->save();
         return redirect('posts');
     }

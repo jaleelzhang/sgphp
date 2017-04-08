@@ -37,11 +37,11 @@
                                     <a href="{{ url('blog/' . $blog->_id . '/edit') }}" class="btn btn-info">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                     </a>
-                                    <form action="{{ url('blog/' . $blog->id) }}" method="post" style="float: right">
+                                    {{--<form action="{{ url('blog/' . $blog->id) }}" method="post" style="float: right">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </form>
+                                    </form>--}}
                             </tr>
                         @endforeach
                     </table>

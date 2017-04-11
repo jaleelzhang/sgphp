@@ -79,11 +79,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/blog') }}">Blog</a>
+                    <a href="https://www.sgphp.com/blog">Blog</a>
                     {{--<a href="{{ url('/tutorial/page/1') }}">教程</a>
                     <a href="{{ url('/video/page/1') }}">视频</a>
                     <a href="{{ url('/traveling/page/1') }}">游记</a>--}}
-                    <a href="{{ url('/contact') }}">Contact</a>
+                    <a href="https://www.sgphp.com/contact">Contact</a>
                 </div>
             </div>
         </div>

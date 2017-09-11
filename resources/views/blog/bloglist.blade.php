@@ -20,7 +20,7 @@
                 </summary>
             </p>
             <p>{{ $blog->abstract }}</p>
-            <p><a class="btn btn-default btn-lg" href="{{ url('blog/' . $blog->_id) }}" role="button">Learn more</a></p>
+            <p><a class="btn btn-default btn-lg" href="{{ url('blog/' . $blog->_id . '.html') }}" role="button">Learn more</a></p>
         </blockquote>
     @endforeach
     <nav aria-label="...">

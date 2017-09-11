@@ -2,6 +2,8 @@
 
 @section('description', $details->abstract)
 
+@section('keywords', $details->title)
+
 @section('title', $details->title)
 
 @section('blog', 'active')

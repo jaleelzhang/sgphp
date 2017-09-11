@@ -9,7 +9,7 @@
 @section('content')
     @foreach($blogs as $blog)
         <blockquote style="border-left: 5pt solid lightgrey">
-            <h1><a href="{{ url('blog/' . $blog->_id) }}" style="font-size: x-large; color: #636b6f">{{ $blog->title }}</a></h1>
+            <h1><a href="{{ url('blog/' . $blog->_id . '.html') }}" style="font-size: x-large; color: #636b6f">{{ $blog->title }}</a></h1>
             <p>
                 <summary>
                     <i class="fa fa-clock-o" aria-hidden="true"></i>

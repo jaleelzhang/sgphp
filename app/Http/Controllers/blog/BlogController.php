@@ -66,6 +66,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
+        $id = substr($id, 0, strpos($id, '.'));
         $blog = Blog::find($id);
         $blog->content = html_entity_decode($blog->content);
         return view('blog/details')->withdetails($blog);

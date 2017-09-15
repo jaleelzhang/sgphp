@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="@yield('description')"/>
         <meta name="keywords" content="@yield('keywords'),双哥php,linux,php,mysql,mongodb,redis,nginx,memcache"/>
-        <title>SGPHP-@yield('title')</title>
+        <title>双哥PHP-@yield('title')</title>
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -87,7 +87,7 @@
         </div>
         <div class="container" style="text-align: center;margin-bottom: 20px;">
             <hr>
-            <p>SGPHP-一个致力于分享世界上最好的语言的网站</p>
+            <p>双哥PHP-一个致力于分享世界上最好的语言的网站</p>
             <p>2013-2017&copySGPHP</p>
         </div>
         </div>

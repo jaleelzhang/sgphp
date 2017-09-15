@@ -1,8 +1,10 @@
 @extends('layouts.common')
 
-@section('description', '双哥PHP-一个致力于分享世界上最好的语言的网站')
+@section('description', '双哥PHP个人博客网站，致力于分享IT技术、教程、BUG解决方案等文章。内容涵盖Linux、php、nginx、mysql、mongodb、redis、memcached、css3、html5等相关领域。')
 
-@section('title', 'SGPHP-一个致力于分享世界上最好的语言的网站')
+<meta name="keywords" content="双哥php,linux,php,mysql,mongodb,redis,nginx,memcache,css3,html5,ubuntu,教程,视频教程,IT,程序员,码农"/>
+
+@section('title', '双哥PHP-一个致力于分享世界上最好的语言的网站')
 
 @section('blog', 'active')
 

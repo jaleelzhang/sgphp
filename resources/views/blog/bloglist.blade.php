@@ -4,7 +4,7 @@
 
 <meta name="keywords" content="双哥php,linux,php,mysql,mongodb,redis,nginx,memcache,css3,html5,ubuntu,教程,视频教程,IT,程序员,码农"/>
 
-@section('title', '双哥PHP-一个致力于分享世界上最好的语言的网站')
+@section('title', '一个致力于分享世界上最好的语言的网站')
 
 @section('blog', 'active')
 

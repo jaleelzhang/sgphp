@@ -36,7 +36,7 @@
             }
 
             img {
-                width:100%;
+                max-width:100%;
                 height: auto;
                 display: block;
             }
@@ -46,7 +46,7 @@
             $(function () {
                 var height = $("img").attr('height');
                 var width = $("img").attr('width');
-                $("img").css({'max-height':height, 'max-width':width});
+                $("img").css({'max-height':height});
             });
         </script>
     </head>

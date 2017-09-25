@@ -34,13 +34,20 @@
                 text-transform: uppercase;
             }
 
-            img {
-                max-width:100%;
-                height: auto;
-                display: block;
-            }
+            /*img {*/
+                /*max-width:100%;*/
+                /*height: auto;*/
+                /*display: block;*/
+            /*}*/
 
         </style>
+        <script>
+            $(window).load(function(){
+
+                $("img").addClass("img-responsive center-block");
+
+            })
+        </script>
     </head>
     <body>
         <div class="container">

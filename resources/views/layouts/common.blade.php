@@ -10,6 +10,7 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
+        <script src="{{ asset('js/jquery-1.9.1.min.js') }}}"></script>
 
         <style>
             html, body {
@@ -42,11 +43,9 @@
 
         </style>
         <script>
-            $(window).load(function(){
-
+            $(function () {
                 $("img").addClass("img-responsive center-block");
-
-            })
+            });
         </script>
     </head>
     <body>

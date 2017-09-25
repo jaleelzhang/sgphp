@@ -35,16 +35,18 @@
                 text-transform: uppercase;
             }
 
-            /*img {*/
-                /*max-width:100%;*/
-                /*height: auto;*/
-                /*display: block;*/
-            /*}*/
+            img {
+                width:100%;
+                height: auto;
+                display: block;
+            }
 
         </style>
         <script>
             $(function () {
-                $("img").addClass("img-responsive center-block");
+                var height = $("img").attr('height');
+                var width = $("img").attr('width');
+                $("img").css({'max-height':height, 'max-width':width});
             });
         </script>
     </head>

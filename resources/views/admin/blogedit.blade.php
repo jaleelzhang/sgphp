@@ -92,6 +92,16 @@
                                     @else
                                     <option value="html">HTML</option>
                                 @endif
+                                @if($blog->type == 'git')
+                                    <option value="git" selected>GIT</option>
+                                    @else
+                                    <option value="git">GIT</option>
+                                @endif
+                                @if($blog->type == 'tools')
+                                    <option value="tools" selected>TOOLS</option>
+                                    @else
+                                    <option value="tools">TOOLS</option>
+                                @endif
                             </select>
                         </div>
                         <div class="form-group">

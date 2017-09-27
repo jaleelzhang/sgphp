@@ -73,9 +73,12 @@
                                     <li><a href="{{ url('blog/type/php') }}">PHP</a></li>
                                     {{--<li><a href="http://www.sgphp.com/blog/mysql/page/1">MYSQL</a></li>--}}
                                     <li><a href="{{ url('blog/type/mongodb') }}">MONGODB</a></li>
-                                    {{--<li><a href="">REDIS</a></li>
-                                    <li><a href="">CSS</a></li>
-                                    <li><a href="">JS</a></li>--}}
+                                    <li><a href="{{ url('blog/type/git') }}">GIT</a></li>
+                                    <li><a href="{{ url('blog/type/tools') }}">TOOLS</a></li>
+                                    <li><a href="{{ url('blog/type/css') }}">CSS</a></li>
+                                    <li><a href="{{ url('blog/type/js') }}">JS</a></li>
+                                    <li><a href="{{ url('blog/type/redis') }}">REDIS</a></li>
+                                    <li><a href="{{ url('blog/type/mysql') }}">MYSQL</a></li>
                                 </ul>
                             </li>
                             {{--<li class="@yield('tutorial')"><a href="http://www.sgphp.com/tutorial/page/1">教程</a></li>

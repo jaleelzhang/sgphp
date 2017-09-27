@@ -46,6 +46,8 @@
                                 <option value="javascript">JAVASCRIPT</option>
                                 <option value="css">CSS</option>
                                 <option value="html">HTML</option>
+                                <option value="git">Git</option>
+                                <option value="tools">Tools</option>
                             </select>
                         </div>
                         <div class="form-group">

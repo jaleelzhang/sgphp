@@ -76,7 +76,7 @@
                                     <li><a href="{{ url('blog/type/git') }}">GIT</a></li>
                                     <li><a href="{{ url('blog/type/tools') }}">TOOLS</a></li>
                                     <li><a href="{{ url('blog/type/css') }}">CSS</a></li>
-                                    <li><a href="{{ url('blog/type/js') }}">JS</a></li>
+                                    <li><a href="{{ url('blog/type/javascript') }}">JS</a></li>
                                     <li><a href="{{ url('blog/type/redis') }}">REDIS</a></li>
                                     <li><a href="{{ url('blog/type/mysql') }}">MYSQL</a></li>
                                 </ul>

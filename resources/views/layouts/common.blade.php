@@ -93,7 +93,7 @@
         <div style="display: flex;min-height: 90vh;flex-direction: column">
 
 
-        <div class="container" style="flex: 1;">
+        <div class="container" style="flex: 1;word-break: break-all;">
             @yield('content')
         </div>
         <div class="container" style="text-align: center;margin-bottom: 20px;">

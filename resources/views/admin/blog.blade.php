@@ -34,7 +34,7 @@
                                 <td>{{ $blog->type }}</td>
                                 <td>{{ date('Y-m-d', $blog->create_time) }}</td>
                                 <td>
-                                    <a href="{{ url('blog/' . $blog->_id . '/edit') }}" class="btn btn-info">
+                                    <a href="{{ url('blog/' . $blog->_id . '/' . $page . '/edit') }}" class="btn btn-info">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                     </a>
                                     {{--<form action="{{ url('blog/' . $blog->id) }}" method="post" style="float: right">

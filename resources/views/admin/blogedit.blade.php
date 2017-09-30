@@ -126,6 +126,9 @@
                                 <input type="radio" name="status" id="status" checked value="2">
                             @endif
                         </div>
+                        <div>
+                            <input type="hidden" name="page" value="{{ $page }}">
+                        </div>
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                 </div>

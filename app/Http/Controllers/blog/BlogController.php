@@ -79,12 +79,13 @@ class BlogController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
+     * @param  int  $page
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $page)
     {
         $blog = Blog::find($id);
-        return view('admin.blogedit')->withblog($blog);
+        return view('admin.blogedit', array('blog' => $blog, 'page' => $page));
     }
 
     /**
@@ -109,7 +110,9 @@ class BlogController extends Controller
         $blog->content = htmlentities($request->content);
         $blog->status = $request->status;
         $blog->save();
-        return redirect('posts');
+
+        $page = $request->page;
+        return redirect('posts?page=' . $page);
     }
 
     /**

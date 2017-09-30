@@ -48,9 +48,11 @@ class HomeController extends Controller
         return redirect('jaleelman');
     }
 
-    public function postList()
+    public function postList(Request $request)
     {
+        $page = $request->input('page');
+        $page = isset($page) ? $page : 1;
         $blogs = Blog::orderBy('create_time', 'desc')->paginate(10);
-        return view('admin.blog')->withblogs($blogs);
+        return view('admin.blog', array('blogs' => $blogs, 'page' => $page));
     }
 }

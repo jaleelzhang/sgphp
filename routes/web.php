@@ -54,7 +54,10 @@ Route::group(['middleware' => ['admin']], function () {
         return view('admin.home');
     });
 
-    Route::resource('/blog', 'blog\BlogController', ['except' => ['show', 'index']]);
+    Route::resource('/blog', 'blog\BlogController', ['except' => ['show', 'index', 'edit']]);
+
+    Route::get('blog/{id}/{page}/edit', 'blog\BlogController@edit');
+
 
     Route::get('/posts', 'admin\HomeController@postList');
 });

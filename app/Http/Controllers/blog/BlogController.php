@@ -16,10 +16,12 @@ class BlogController extends Controller
     public function index($type = '')
     {
         if (empty($type)) {
-            $blogs = Blog::orderBy('create_time', 'desc')->paginate(5);
+            $blogs = Blog::where('status', '1')->orderBy('create_time', 'desc')->paginate(5);
         } else {
-            $blogs = Blog::where('type', $type)->orderBy('create_time', 'desc')->paginate(5);
+            $blogs = Blog::where('status', '1')->where('type', $type)->orderBy('create_time', 'desc')->paginate(5);
         }
+
+//        var_dump($blogs);exit;
 
         return view('blog/bloglist')->withblogs($blogs);
     }
@@ -54,6 +56,7 @@ class BlogController extends Controller
         $blog->abstract = $request->abstract;
         $blog->content = htmlentities($request->content);
         $blog->create_time = time();
+        $blog->status = $request->status;
         $blog->save();
         return redirect('posts');
     }
@@ -104,7 +107,7 @@ class BlogController extends Controller
         $blog->type = $request->type;
         $blog->abstract = $request->abstract;
         $blog->content = htmlentities($request->content);
-//        $blog->create_time = time();
+        $blog->status = $request->status;
         $blog->save();
         return redirect('posts');
     }

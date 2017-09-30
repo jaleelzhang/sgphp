@@ -58,6 +58,13 @@
                             <label for="content">Blog Content</label>
                             <textarea name="content" class="form-control" rows="10" placeholder="Blog Content" id="content"></textarea>
                         </div>
+                        <div class="form-group">
+                            <label>发布上线</label><br />
+                            <label for="status">是</label>
+                            <input type="radio" name="status" id="status" value="1">
+                            <label for="status">否</label>
+                            <input type="radio" name="status" id="status" value="2">
+                        </div>
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                 </div>

@@ -10,6 +10,10 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen" />
+        <link rel="bookmark" href="/favicon.ico">
+        <link rel="icon" href="/favicon.ico">
+
         <script src="{{ asset('js/jquery-1.9.1.min.js') }}"></script>
 
         <style>

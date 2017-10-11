@@ -55,4 +55,20 @@ class HomeController extends Controller
         $blogs = Blog::orderBy('create_time', 'desc')->paginate(10);
         return view('admin.blog', array('blogs' => $blogs, 'page' => $page));
     }
+
+    public function adminInfo()
+    {
+        $info = Session::get('admin');
+        return view('admin.userInfo')->withinfo($info);
+    }
+
+    public function resetPass(Request $request)
+    {
+        $pass = $request->password;
+        $info = Session::get('admin');
+        $admin = Admin::find($info->_id);
+        $admin->admin_pass = encrypt($pass);
+        $admin->save();
+        return view('admin.home');
+    }
 }

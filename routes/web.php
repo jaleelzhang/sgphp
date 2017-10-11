@@ -25,39 +25,55 @@ Route::group(['prefix' => 'blog'], function() {
 });
 
 Route::get('/tutorial/page/{page}', function () {
-    return view('errors.503');
+    return view('errors.404');
 });
 
 Route::get('/video/page/{page}', function () {
-    return view('errors.503');
+    return view('errors.404');
 });
 
 Route::get('/traveling/page/{page}', function () {
-    return view('errors.503');
+    return view('errors.404');
 });
 
 Route::get('/contact', function () {
-    return view('errors.503');
+    return view('errors.404');
 });
 
-//The backend's routes
+/**
+ * The backend's routes
+ */
 
 Route::get('/jaleelman', function() {
-    return view('admin.login');
+    if(Session('admin')) return view('admin.home'); else return view('admin.login');
 });
 
-Route::post('/login', 'admin\HomeController@login');
-Route::get('/logout', 'admin\HomeController@logout');
+Route::group(['prefix' => 'jaleelman'], function() {
+    Route::post('login', 'admin\HomeController@login');
+    Route::get('logout', 'admin\HomeController@logout');
+});
 
-Route::group(['middleware' => ['admin']], function () {
+Route::group(['middleware' => ['admin'], 'prefix' => 'jaleelman'], function () {
     Route::get('/home', function() {
         return view('admin.home');
     });
 
     Route::resource('/blog', 'blog\BlogController', ['except' => ['show', 'index', 'edit']]);
 
-    Route::get('blog/{id}/{page}/edit', 'blog\BlogController@edit');
+    Route::get('/blog/{id}/{page}/edit', 'blog\BlogController@edit');
 
 
     Route::get('/posts', 'admin\HomeController@postList');
+
+    Route::get('/account', function() {
+        return view('admin.account');
+    });
+
+    Route::get('/setting', function() {
+       return view('admin.setting');
+    });
+
+    Route::get('/adminList', function() {
+        return view('admin.adminList');
+    });
 });

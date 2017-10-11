@@ -58,7 +58,7 @@ class BlogController extends Controller
         $blog->create_time = time();
         $blog->status = $request->status;
         $blog->save();
-        return redirect('posts');
+        return redirect('jaleelman/posts');
     }
 
     /**
@@ -112,7 +112,7 @@ class BlogController extends Controller
         $blog->save();
 
         $page = $request->page;
-        return redirect('posts?page=' . $page);
+        return redirect('jaleelman/posts?page=' . $page);
     }
 
     /**
@@ -124,6 +124,6 @@ class BlogController extends Controller
     public function destroy($id)
     {
         Blog::destroy($id);
-        return redirect('posts');
+        return redirect('jaleelman/posts');
     }
 }

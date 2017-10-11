@@ -13,6 +13,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen" />
+    <link rel="bookmark" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
 
     <!-- Scripts -->
     <script>
@@ -58,9 +61,9 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="{{ url('admin/' . Session::get('admin')['_id']) }}"><i class="fa fa-user-md" aria-hidden="true"></i>&nbsp;&nbsp;ACCOUNT</a>
-                                    <a href="{{ url('admin/' . Session::get('admin')['_id'] . '/edit') }}"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;SETTING</a>
-                                    <a href="{{ url('logout') }}"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;&nbsp;LOGOUT</a>
+                                    <a href="{{ url('jaleelman/account') }}"><i class="fa fa-user-md" aria-hidden="true"></i>&nbsp;&nbsp;ACCOUNT</a>
+                                    <a href="{{ url('jaleelman/setting') }}"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;SETTING</a>
+                                    <a href="{{ url('jaleelman/logout') }}"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;&nbsp;LOGOUT</a>
                                 </li>
                             </ul>
                         </li>
@@ -70,8 +73,33 @@
         </div>
     </nav>
 
-    @section('content')
-        @show
+    <div class="container">
+        @if(!empty(Session::get('admin')))
+            <div class="col-md-2">
+                <div class="list-group">
+                    @if(in_array(parse_url(URL::current())['path'], array('/jaleelman/login', '/jaleelman/home', '/jaleelman/account', '/jaleelman/setting', '/jaleelman')))
+                        <a href="{{ url('jaleelman/home') }}" class="list-group-item active"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;HOME</a>
+                    @else
+                        <a href="{{ url('jaleelman/home') }}" class="list-group-item"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;HOME</a>
+                    @endif
+
+                    @if(parse_url(URL::current())['path'] == '/jaleelman/posts' or mb_strstr(parse_url(URL::current())['path'], 'blog'))
+                        <a href="{{ url('jaleelman/posts') }}" class="list-group-item active"><i class="fa fa-rss-square" aria-hidden="true"></i>&nbsp;&nbsp;POSTS</a>
+                    @else
+                        <a href="{{ url('jaleelman/posts') }}" class="list-group-item"><i class="fa fa-rss-square" aria-hidden="true"></i>&nbsp;&nbsp;POSTS</a>
+                    @endif
+
+                    @if(parse_url(URL::current())['path'] == '/jaleelman/adminList')
+                        <a href="{{ url('jaleelman/adminList') }}" class="list-group-item active"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;ADMINS</a>
+                    @else
+                        <a href="{{ url('jaleelman/adminList') }}" class="list-group-item"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;ADMINS</a>
+                    @endif
+                </div>
+            </div>
+        @endif
+        @section('content')
+            @show
+    </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

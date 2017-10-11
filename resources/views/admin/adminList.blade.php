@@ -4,11 +4,11 @@
 <div class="col-md-10">
     <div class="panel panel-default">
     <div class="panel-heading">
-        SGPHP BACKEND MANAGEMENT SYSTEM
+        HEY,THIS IS ADMIN LIST!
     </div>
 
     <div class="panel-body">
-        TO DO ...
+        SHOW ADMINS TABLE LIST!!!
     </div>
     </div>
 </div>

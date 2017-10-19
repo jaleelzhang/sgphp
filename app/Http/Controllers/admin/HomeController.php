@@ -71,4 +71,12 @@ class HomeController extends Controller
         $admin->save();
         return view('admin.home');
     }
+
+    public function blogDetail($id)
+    {
+        $id = strpos($id, '.') !== FALSE ? substr($id, 0, strpos($id, '.')) : $id;
+        $blog = Blog::find($id);
+        $blog->content = html_entity_decode($blog->content);
+        return view('admin/blogdetail')->withdetails($blog);
+    }
 }

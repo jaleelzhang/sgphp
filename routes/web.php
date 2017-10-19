@@ -45,7 +45,8 @@ Route::get('/contact', function () {
  */
 
 Route::get('/jaleelman', function() {
-    if(Session('admin')) return view('admin.home'); else return view('admin.login');
+//    if(Session('admin')) return view('admin.home'); else return view('admin.login');
+    return view('admin.login');
 });
 
 Route::group(['prefix' => 'jaleelman'], function() {
@@ -76,4 +77,6 @@ Route::group(['middleware' => ['admin'], 'prefix' => 'jaleelman'], function () {
     Route::get('/adminList', function() {
         return view('admin.adminList');
     });
+
+    Route::get('/blogdetail/{id}', 'admin\HomeController@blogDetail');
 });

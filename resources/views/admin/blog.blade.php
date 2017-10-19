@@ -21,7 +21,7 @@
 
                 @foreach($blogs as $blog)
                     <tr>
-                        <td>{{ $blog->title }}</td>
+                        <td><a href="{{ url('jaleelman/blogdetail/' . $blog->_id) }}">{{ $blog->title }}</a></td>
                         <td>{{ $blog->type }}</td>
                         <td>{{ date('Y-m-d', $blog->create_time) }}</td>
                         <td>

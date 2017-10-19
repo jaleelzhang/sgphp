@@ -5,6 +5,7 @@ namespace App\Http\Controllers\blog;
 use App\Http\Models\Blog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 
 class BlogController extends Controller
 {
@@ -70,8 +71,15 @@ class BlogController extends Controller
     public function show($id)
     {
         $id = strpos($id, '.') !== FALSE ? substr($id, 0, strpos($id, '.')) : $id;
-        $blog = Blog::find($id);
-        $blog->content = html_entity_decode($blog->content);
+
+        if (Cache::has('blog:profile:' . $id)) {
+            $blog = Cache::get('blog:profile:' . $id);
+        } else {
+            $blog = Blog::find($id);
+            $blog->content = html_entity_decode($blog->content);
+            Cache::forever('blog:profile:' . $id, $blog);
+        }
+
         return view('blog/details')->withdetails($blog);
     }
 
@@ -84,7 +92,12 @@ class BlogController extends Controller
      */
     public function edit($id, $page)
     {
-        $blog = Blog::find($id);
+        if (Cache::has('blog:profile:' . $id)) {
+            $blog = Cache::get('blog:profile:' . $id);
+        } else {
+            $blog = Blog::find($id);
+        }
+
         return view('admin.blogedit', array('blog' => $blog, 'page' => $page));
     }
 
@@ -111,6 +124,10 @@ class BlogController extends Controller
         $blog->status = $request->status;
         $blog->save();
 
+        if (Cache::has('blog:profile:' . $id)) {
+            Cache::forget('blog:profile:' . $id);
+        }
+
         $page = $request->page;
         return redirect('jaleelman/posts?page=' . $page);
     }
@@ -124,6 +141,11 @@ class BlogController extends Controller
     public function destroy($id)
     {
         Blog::destroy($id);
+
+        if (Cache::has('blog:profile:' . $id)) {
+            Cache::forget('blog:profile:' . $id);
+        }
+
         return redirect('jaleelman/posts');
     }
 }

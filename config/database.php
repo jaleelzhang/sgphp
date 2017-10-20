@@ -71,8 +71,11 @@ return [
             'host'     => '127.0.0.1',
             'port'     => 27017,
             'database' => 'myblog',
-            'username' => '',
-            'password' => '',
+            'username' => 'Jaleel',
+            'password' => 'Mariahcarey3',
+            'options'  => [
+                'database' => 'myblog' // sets the authentication database required by mongo 3
+            ]
         ],
 
     ],

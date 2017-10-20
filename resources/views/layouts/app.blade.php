@@ -23,6 +23,14 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+
+    <style type="text/css">
+        img {
+            max-width:100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-static-top">

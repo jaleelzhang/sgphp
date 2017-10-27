@@ -48,14 +48,14 @@ class BlogController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'abstract' => 'required|max:300',
-            'content' => 'required',
+            'blogContent-markdown-doc' => 'required',
         ]);
 
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->type = $request->type;
         $blog->abstract = $request->abstract;
-        $blog->content = htmlentities($request->content);
+        $blog->content = $request->input('blogContent-markdown-doc');
         $blog->create_time = time();
         $blog->status = $request->status;
         $blog->save();
@@ -113,14 +113,14 @@ class BlogController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'abstract' => 'required|max:300',
-            'content' => 'required',
+            'blogContent-markdown-doc' => 'required',
         ]);
 
         $blog = Blog::find($id);
         $blog->title = $request->title;
         $blog->type = $request->type;
         $blog->abstract = $request->abstract;
-        $blog->content = htmlentities($request->content);
+        $blog->content = $request->input('blogContent-markdown-doc');
         $blog->status = $request->status;
         $blog->save();
 

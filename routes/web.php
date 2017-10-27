@@ -45,8 +45,7 @@ Route::get('/contact', function () {
  */
 
 Route::get('/jaleelman', function() {
-//    if(Session('admin')) return view('admin.home'); else return view('admin.login');
-    return view('admin.login');
+    if(Session('admin')) return view('admin.home'); else return view('admin.login');
 });
 
 Route::group(['prefix' => 'jaleelman'], function() {

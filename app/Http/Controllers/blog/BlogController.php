@@ -6,6 +6,7 @@ use App\Http\Models\Blog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
+use Symfony\Component\Yaml\Tests\B;
 
 class BlogController extends Controller
 {
@@ -147,5 +148,42 @@ class BlogController extends Controller
         }
 
         return redirect('jaleelman/posts');
+    }
+
+    public function comment(Request $request)
+    {
+        $rules = [
+//            'g-recaptcha-response' => 'required',
+            'username'=>'required',
+            'comment'=>'required',
+        ];
+
+        $this->validate($request, $rules);
+
+        $id = $request->id;
+        $blog = Blog::find($id);
+        $old_comment_arr = json_decode(html_entity_decode($blog->comments), true);
+
+        if (!is_array($old_comment_arr)) {
+            $old_comment_arr = [];
+        }
+
+        $new_comments_arr = array_merge($old_comment_arr, array(array($request->username,$request->comment)));
+        $new_comment_json = json_encode($new_comments_arr);
+
+//        DB::collection('s_article')->where('_id', $id)->update(array('comments' => $new));
+        $blog->comments = $new_comment_json;
+        $blog->save();
+
+        if (Cache::has('blog:profile:' . $id)) {
+            Cache::forget('blog:profile:' . $id);
+        }
+
+        $str = '';
+        foreach ($new_comments_arr as $v) {
+            $str .= "<p>[<b>$v[0]</b>]：$v[1]</p>";
+        }
+
+        echo $str;
     }
 }

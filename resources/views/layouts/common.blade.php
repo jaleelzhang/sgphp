@@ -16,6 +16,10 @@
 
         <script src="{{ asset('js/jquery-1.9.1.min.js') }}"></script>
 
+        @if(isset($details))
+            <script src='https://reCAPTCHA.net/recaptcha/api.js'></script>
+        @endif
+
         <style>
             html, body {
                 background-color: #fff;
@@ -99,6 +103,9 @@
 
             <div class="container" style="flex: 1;word-break: break-all;">
                 @yield('content')
+            </div>
+            <div class="container">
+                @yield('comment')
             </div>
             <div class="container" style="text-align: center;margin-bottom: 20px;">
                 <hr>

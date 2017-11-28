@@ -48,3 +48,60 @@
         </script>
     @endif
 @endsection
+
+@section('comment')
+    <blockquote style="border: none;">
+        <form action="{{ url('/comment') }}" method="post">
+            {{ csrf_field() }}
+            <h4>COMMENTS</h4>
+            <div class="comments form-group">
+                @if (isset($details->comments))
+                    @foreach(json_decode(html_entity_decode($details->comments), true) as $comment)
+                        <p>[<b>{{ $comment[0] }}</b>]: {{ $comment[1] }}</p>
+                    @endforeach
+                @endif
+            </div>
+            <div class="alert alert-danger" role="alert" id="notice" style="display: none;"></div>
+            <div class="input-group form-group">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" id="uname" name="uname" required value="">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control txt" rows="5" placeholder="SAY SOMETHING PLEASE!" id="com_text" name="comment" required></textarea>
+            </div>
+            <div class="g-recaptcha form-group" data-sitekey="6LeYpDoUAAAAAOMgOpF_ZevuQJa5nf740qKn4qS6"></div>
+            <button type="button" class="btn btn-default">Submit</button>
+        </form>
+    </blockquote>
+
+    <script type="text/javascript">
+        $(function () {
+            $("button.btn").click(function(){
+                var username = $('#uname').val();
+                var content = $('#com_text').val();
+
+                if (username == '') {
+                    $('#notice').css("display", 'block');
+                    $('#notice').html('请输入您的用户名!');
+                    return;
+                }
+
+                if (content == '') {
+                    $('#notice').css("display", 'block');
+                    $('#notice').html('请输入您要评论的内容!');
+                    return;
+                }
+
+                var id = "{{ $details->_id }}";
+                var oldComment = "{{ $details->comments }}";
+                var token = $('[name=_token]').val();
+
+                $.post("{{ url('/comment/') }}", {'id':id, 'username':username, 'comment':content, 'oldComment':oldComment, '_token':token}, function(result) {
+                    $('#uname').val("");
+                    $('#com_text').val("");
+                    $('.comments').html(result);
+                })
+            });
+        });
+    </script>
+@endsection

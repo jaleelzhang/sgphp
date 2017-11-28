@@ -24,6 +24,8 @@ Route::group(['prefix' => 'blog'], function() {
     Route::get('{id}', 'blog\BlogController@show');
 });
 
+Route::post('/comment', 'blog\BlogController@comment');
+
 Route::get('/tutorial/page/{page}', function () {
     return view('errors.404');
 });

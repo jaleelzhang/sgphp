@@ -15,6 +15,25 @@ $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
 
+// TODO 判断当前的环境 加载相对就的环境配置文件
+$env = $app->detectEnvironment(function(){
+    $environmentPath = __DIR__.'/../';
+
+    if (file_exists($environmentPath)){
+        $doc = new Dotenv\Dotenv($environmentPath);
+        $doc->load(); // 加载.env环境配置文件 用于获取当前配置的环境值
+
+        $en_val = getenv('APP_ENV');
+
+        if ($en_val && file_exists(__DIR__.'/../.env.' . getenv('APP_ENV'))) {
+            $doc = new Dotenv\Dotenv(__DIR__ . '/../', '.env.' . getenv('APP_ENV'));
+            $doc->overload(); // 覆盖式加载对应的环境配置文件
+        }
+    }
+
+    return $en_val;
+});
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces

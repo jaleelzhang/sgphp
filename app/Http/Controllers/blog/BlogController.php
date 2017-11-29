@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
 use Symfony\Component\Yaml\Tests\B;
+use Validator;
 
 class BlogController extends Controller
 {
@@ -153,12 +154,34 @@ class BlogController extends Controller
     public function comment(Request $request)
     {
         $rules = [
-//            'g-recaptcha-response' => 'required',
+            'validator' => 'required',
             'username'=>'required',
             'comment'=>'required',
         ];
 
-        $this->validate($request, $rules);
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            $err = $validator->errors()->messages();
+
+            $str = '';
+            foreach($err as $k => $v) {
+
+                if ($k == 'username') {
+                    $str .= '<div class="alert alert-danger" role="alert" id="notice">请输入您的用户名!</div>';
+                }
+
+                if ($k == 'comment') {
+                    $str .= '<div class="alert alert-danger" role="alert" id="notice">请输入您要输入的评论内容!</div>';
+                }
+
+                if ($k == 'validator') {
+                    $str .= '<div class="alert alert-danger" role="alert" id="notice">请输入验证码!</div>';
+                }
+            }
+
+            die($str);
+        }
 
         $id = $request->id;
         $blog = Blog::find($id);

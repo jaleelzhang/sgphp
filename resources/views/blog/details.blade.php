@@ -69,7 +69,8 @@
             <div class="form-group">
                 <textarea class="form-control txt" rows="5" placeholder="SAY SOMETHING PLEASE!" id="com_text" name="comment" required></textarea>
             </div>
-            <div class="g-recaptcha form-group" data-sitekey="6LeYpDoUAAAAAOMgOpF_ZevuQJa5nf740qKn4qS6"></div>
+            {{--<div class="g-recaptcha form-group" data-sitekey="6LeYpDoUAAAAAOMgOpF_ZevuQJa5nf740qKn4qS6"></div>--}}
+            <div class="g-recaptcha form-group" data-sitekey="6LdUuToUAAAAAFocEh3WjbWytKvnX3GIiaRaYIhU"></div>
             <button type="button" class="btn btn-default">Submit</button>
         </form>
     </blockquote>
@@ -79,6 +80,7 @@
             $("button.btn").click(function(){
                 var username = $('#uname').val();
                 var content = $('#com_text').val();
+                var validator = $('#g-recaptcha-response').val();
 
                 if (username == '') {
                     $('#notice').css("display", 'block');
@@ -89,16 +91,25 @@
                 if (content == '') {
                     $('#notice').css("display", 'block');
                     $('#notice').html('请输入您要评论的内容!');
+                    $('#uname').val(username);
+                    return;
+                }
+
+                if (validator == '') {
+                    $('#notice').css("display", 'block');
+                    $('#notice').html('请输入验证码!');
+                    $('#uname').val(username);
+                    $('#com_text').val(content);
                     return;
                 }
 
                 var id = "{{ $details->_id }}";
-                var oldComment = "{{ $details->comments }}";
                 var token = $('[name=_token]').val();
 
-                $.post("{{ url('/comment/') }}", {'id':id, 'username':username, 'comment':content, 'oldComment':oldComment, '_token':token}, function(result) {
+                $.post("{{ url('/comment/') }}", {'id':id, 'username':username, 'comment':content, 'validator':validator, '_token':token}, function(result) {
                     $('#uname').val("");
                     $('#com_text').val("");
+                    $('#notice').css("display", "none");
                     $('.comments').html(result);
                 })
             });

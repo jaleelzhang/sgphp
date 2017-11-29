@@ -70,7 +70,6 @@
                 <textarea class="form-control txt" rows="5" placeholder="SAY SOMETHING PLEASE!" id="com_text" name="comment" required></textarea>
             </div>
             <div class="g-recaptcha form-group" data-sitekey="{{ getenv('RECAPTCHA_PUBLIC_KEY') }}"></div>
-            {{--<div class="g-recaptcha form-group" data-sitekey="6LdUuToUAAAAAFocEh3WjbWytKvnX3GIiaRaYIhU"></div>--}}
             <button type="button" class="btn btn-default">Submit</button>
         </form>
     </blockquote>
